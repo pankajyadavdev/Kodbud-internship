@@ -1,0 +1,133 @@
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+
+    /* 1. Navbar slides down */
+    .nav-animate {
+        animation: slideDown 0.7s ease-out both;
+    }
+
+    /* 2. Hero content fades and slides upward */
+    .hero-animate h1 {
+        animation: fadeSlideUp 0.8s ease-out 0.1s both;
+    }
+
+    .hero-animate .hero-description {
+        animation: fadeSlideUp 0.8s ease-out 0.3s both;
+    }
+
+    .hero-animate .hero-button {
+        animation: fadeSlideUp 0.8s ease-out 0.5s both;
+    }
+
+    /* 3. Menu section appears */
+    .menu-animate {
+        animation: fadeIn 0.8s ease-out both;
+    }
+
+    /* 4. Cards rise into view */
+    .menu-card {
+        animation: fadeSlideUp 0.7s ease-out both;
+    }
+
+    .menu-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .menu-card:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    .menu-card:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+}
+
+/* Custom keyframes */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth hover transitions on Bootstrap cards */
+.card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Food images zoom slightly on hover */
+.card-img-top {
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.04);
+}
+
+/* Keep image zoom inside the card */
+.card {
+    overflow: hidden;
+}
+
+/* Buttons transition smoothly */
+.btn {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar links */
+.navbar .nav-link {
+    transition: color 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107;
+}
+
+/* Footer */
+footer {
+    transition: background-color 0.3s ease;
+}
