@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie Corner | Restaurant</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-light">
+
+    
+<!-- Add the animation class to your navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-animate">
+    <!-- Keep your existing navbar content here -->
+</nav>
+
+<!-- Add these classes to your existing hero section -->
+<header id="home"
+        class="bg-warning-subtle py-5 text-center hero-animate">
+    <div class="container py-4">
+        <h1 class="display-4 fw-bold hero-title">
+            Good Food, Good Mood!
+        </h1>
+
+        <p class="lead text-secondary mt-3 hero-description">
+            Fresh ingredients, delicious flavours, and food made with love.
+        </p>
+
+        <a href="#menu" class="btn btn-dark btn-lg mt-3 hero-button">
+            Explore Our Menu
+        </a>
+    </div>
+</header>
+
+<!-- Add menu-animate to your existing menu section -->
+<main id="menu" class="container py-5 menu-animate">
+    <!-- Keep your existing menu heading and row here -->
+
+    <!-- Add menu-card to each of the three card columns -->
+    <div class="col-12 col-md-6 col-lg-4 menu-card">
+        <!-- Keep the existing Bootstrap card here -->
+    </div>
+</main>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Our Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Content Area -->
+    <header id="home" class="bg-warning-subtle py-5 text-center">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Good Food, Good Mood!</h1>
+
+            <p class="lead text-secondary mt-3">
+                Fresh ingredients, delicious flavours, and food made with love.
+            </p>
+
+            <a href="#menu" class="btn btn-dark btn-lg mt-3">
+                Explore Our Menu
+            </a>
+        </div>
+    </header>
+
+    <!-- Menu Cards -->
+    <main id="menu" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Popular Dishes</h2>
+            <p class="text-secondary">
+                Discover some of our customer favourites.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Freshly baked pizza"
+                        style="height: 220px; object-fit: cover;"
+                    >
+
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Margherita Pizza</h5>
+                        <p class="card-text text-secondary">
+                            Crispy crust, rich tomato sauce, fresh basil,
+                            and melted mozzarella cheese.
+                        </p>
+                        <p class="fs-5 fw-bold text-success">₹249</p>
+                        <a href="#contact" class="btn btn-outline-dark">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Burger with fresh vegetables"
+                        style="height: 220px; object-fit: cover;"
+                    >
+
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Classic Burger</h5>
+                        <p class="card-text text-secondary">
+                            A juicy patty with lettuce, tomato, cheese,
+                            and our signature sauce.
+                        </p>
+                        <p class="fs-5 fw-bold text-success">₹179</p>
+                        <a href="#contact" class="btn btn-outline-dark">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Fresh vegetable salad"
+                        style="height: 220px; object-fit: cover;"
+                    >
+
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Garden Salad</h5>
+                        <p class="card-text text-secondary">
+                            A refreshing mix of crisp vegetables,
+                            greens, and a light dressing.
+                        </p>
+                        <p class="fs-5 fw-bold text-success">₹149</p>
+                        <a href="#contact" class="btn btn-outline-dark">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container pb-5">
+        <div class="bg-white rounded-3 shadow-sm p-4 p-md-5 text-center">
+            <h2 class="fw-bold">Visit Foodie Corner</h2>
+            <p class="text-secondary mb-1">
+                Have a question or want to place an order?
+            </p>
+            <p class="mb-0">
+                Email: hello@example.com
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1 fw-bold">Foodie Corner 🍽️</p>
+            <p class="mb-0 text-white-50">
+                &copy; 2026 Foodie Corner. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+</html>
