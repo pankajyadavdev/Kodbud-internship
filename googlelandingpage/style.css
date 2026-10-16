@@ -1,0 +1,520 @@
+
+/* ==============================
+   RESET AND BASE STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #202124;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ==============================
+   TOP NAVIGATION
+============================== */
+
+.top-bar {
+    width: 100%;
+    padding: 6px 20px;
+}
+
+.top-links {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-links > a:not(.sign-in):not(.apps-button) {
+    font-size: 13px;
+}
+
+.apps-button {
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 4px);
+    grid-template-rows: repeat(3, 4px);
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+
+    border-radius: 50%;
+}
+
+.apps-button:hover {
+    background: #f0f0f0;
+    text-decoration: none;
+}
+
+.apps-button span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #5f6368;
+}
+
+.sign-in {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+    padding: 0 24px;
+
+    color: #fff;
+    background: #0b57d0;
+    border-radius: 4px;
+
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+.sign-in:hover {
+    background: #1b66c9;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+
+.main-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 105px 20px 40px;
+}
+
+
+/* ==============================
+   GOOGLE LOGO
+============================== */
+
+.google-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(76px, 10vw, 92px);
+    font-weight: 500;
+    line-height: 1;
+
+    letter-spacing: -5px;
+    white-space: nowrap;
+    margin-bottom: 27px;
+}
+
+.google-logo .blue {
+    color: #4285f4;
+}
+
+.google-logo .red {
+    color: #ea4335;
+}
+
+.google-logo .yellow {
+    color: #fbbc05;
+}
+
+.google-logo .green {
+    color: #34a853;
+}
+
+
+/* ==============================
+   SEARCH FORM
+============================== */
+
+.search-form {
+    width: 100%;
+    max-width: 584px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    width: 100%;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    background: #fff;
+
+    transition: box-shadow 0.2s ease;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    border-color: transparent;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+
+    position: relative;
+    border: 2px solid #9aa0a6;
+    border-radius: 50%;
+}
+
+.search-icon::after {
+    content: "";
+
+    position: absolute;
+    width: 6px;
+    height: 2px;
+
+    right: -5px;
+    bottom: -3px;
+
+    background: #9aa0a6;
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #202124;
+    font-size: 16px;
+}
+
+.tool-icon {
+    width: 25px;
+    height: 30px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tool-icon svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: #4285f4;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==============================
+   SEARCH BUTTONS
+============================== */
+
+.search-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 29px;
+}
+
+.search-buttons button {
+    min-height: 36px;
+    padding: 0 16px;
+
+    color: #3c4043;
+    background: #f8f9fa;
+
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-buttons button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==============================
+   LANGUAGE OPTIONS
+============================== */
+
+.language-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+
+    max-width: 700px;
+    margin-top: 27px;
+
+    color: #4d5156;
+    font-size: 12px;
+    line-height: 2.2;
+}
+
+.language-options a {
+    color: #1a0dab;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    width: 100%;
+    background: #f2f2f2;
+    color: #202124;
+}
+
+.country {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    color: #1f1f1f;
+    font-size: 15px;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    padding: 15px 30px;
+}
+
+.footer-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-group a,
+.carbon-link {
+    color: #202124;
+    font-size: 14px;
+}
+
+.carbon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.leaf {
+    color: #188038;
+    font-size: 18px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 900px) {
+    .main-content {
+        padding-top: 90px;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+    }
+
+    .footer-group {
+        justify-content: center;
+    }
+
+    .carbon-link {
+        width: 100%;
+        order: 3;
+    }
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 6px 12px;
+    }
+
+    .top-links {
+        gap: 14px;
+    }
+
+    .main-content {
+        padding: 90px 18px 45px;
+    }
+
+    .google-logo {
+        font-size: clamp(64px, 17vw, 78px);
+        letter-spacing: -4px;
+        margin-bottom: 25px;
+    }
+
+    .search-form {
+        max-width: 100%;
+    }
+
+    .search-box {
+        height: 44px;
+        gap: 10px;
+        padding: 0 12px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+    }
+
+    .search-buttons {
+        margin-top: 26px;
+        gap: 10px;
+    }
+
+    .search-buttons button {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .language-options {
+        max-width: 360px;
+        margin-top: 25px;
+        gap: 0 9px;
+    }
+
+    .country {
+        padding: 15px 20px;
+    }
+
+    .footer-bottom {
+        padding: 18px 20px;
+        gap: 20px;
+    }
+
+    .footer-group {
+        gap: 18px;
+    }
+
+    .footer-group a,
+    .carbon-link {
+        font-size: 12px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 360px) {
+    .top-links {
+        gap: 10px;
+    }
+
+    .sign-in {
+        padding: 0 15px;
+    }
+
+    .main-content {
+        padding-inline: 12px;
+    }
+
+    .google-logo {
+        font-size: 62px;
+        letter-spacing: -4px;
+    }
+
+    .search-box {
+        gap: 8px;
+        padding-inline: 10px;
+    }
+
+    .tool-icon {
+        width: 21px;
+    }
+
+    .tool-icon svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .search-buttons {
+        gap: 7px;
+    }
+
+    .search-buttons button {
+        padding-inline: 9px;
+        font-size: 12px;
+    }
+}
